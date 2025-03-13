@@ -1,0 +1,100 @@
+.terminal-wrapper {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.logo {
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+  padding: 1.5em;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.terminal-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.terminal-card {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--primary-color);
+}
+
+.resource-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--primary-color);
+}
+
+.resource-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.resource-item h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.button-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.terminal-button {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.terminal-button:hover {
+  background-color: var(--secondary-color);
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--primary-color);
+  text-align: center;
+}
+
+footer a {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-separator {
+  margin: 0 10px;
+}
+
+.terminal-prompt {
+  color: var(--font-color);
+}
+
+.command {
+  background-color: var(--code-bg-color);
+  color: var(--font-color);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: var(--mono-font-stack);
+  font-size: 0.9em;
+  display: inline-block;
+} 
