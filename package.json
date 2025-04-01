@@ -11,8 +11,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "terminal.css": "^0.7.5"
   },
   "devDependencies": {
@@ -32,6 +32,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mcpdotdirect/mcp-front-end"
+    "url": "https://github.com/mcpdotdirect/mcpdotdirect.github.io"
   }
 }

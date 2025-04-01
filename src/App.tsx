@@ -3,16 +3,35 @@ import './App.css'
 function App() {
   const repositories = [
     {
+      name: "evm-mcp-server",
+      url: "https://github.com/mcpdotdirect/evm-mcp-server",
+      description: "mcp server that provides llm with tools for interacting with evm networks",
+      packageUrl: "https://www.npmjs.com/package/@mcpdotdirect/evm-mcp-server"
+    },
+    {
+      name: "starknet-mcp-server",
+      url: "https://github.com/mcpdotdirect/starknet-mcp-server",
+      description: "mcp server for starknet integration",
+      packageUrl: "https://www.npmjs.com/package/@mcpdotdirect/starknet-mcp-server"
+    },
+    {
+      name: "template-mcp-server",
+      url: "https://github.com/mcpdotdirect/template-mcp-server",
+      description: "quickly set up your own mcp server via npx @mcpdotdirect/create-mcp-server",
+      packageUrl: "https://www.npmjs.com/package/@mcpdotdirect/create-mcp-server"
+    }
+    ,
+    {
       name: "template-mcp-server",
       url: "https://github.com/mcpdotdirect/template-mcp-server",
       description: "quickly set up your own mcp server via npx @mcpdotdirect/create-mcp-server",
       packageUrl: "https://www.npmjs.com/package/@mcpdotdirect/create-mcp-server"
     },
     {
-      name: "evm-mcp-server",
-      url: "https://github.com/mcpdotdirect/evm-mcp-server",
-      description: "mcp server that provides llm with tools for interacting with evm networks",
-      packageUrl: "https://www.npmjs.com/package/@mcpdotdirect/evm-mcp-server"
+      name: "need a custom mcp server built ? contact us",
+      url: "mailto:info@mcp.direct",
+      description: "get in touch, we can advise & build a solution tailored for your needs",
+      packageUrl: ""
     }
   ]
 
