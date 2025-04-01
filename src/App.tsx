@@ -19,13 +19,6 @@ function App() {
       url: "https://github.com/mcpdotdirect/template-mcp-server",
       description: "quickly set up your own mcp server via npx @mcpdotdirect/create-mcp-server",
       packageUrl: "https://www.npmjs.com/package/@mcpdotdirect/create-mcp-server"
-    }
-    ,
-    {
-      name: "template-mcp-server",
-      url: "https://github.com/mcpdotdirect/template-mcp-server",
-      description: "quickly set up your own mcp server via npx @mcpdotdirect/create-mcp-server",
-      packageUrl: "https://www.npmjs.com/package/@mcpdotdirect/create-mcp-server"
     },
     {
       name: "need a custom mcp server built ? contact us",
