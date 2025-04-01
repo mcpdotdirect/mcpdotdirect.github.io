@@ -11,7 +11,7 @@ function App() {
     {
       name: "starknet-mcp-server",
       url: "https://github.com/mcpdotdirect/starknet-mcp-server",
-      description: "mcp server for starknet integration",
+      description: "mcp server that provides an llm with tools for interacting with starknet",
       packageUrl: "https://www.npmjs.com/package/@mcpdotdirect/starknet-mcp-server"
     },
     {
@@ -21,7 +21,7 @@ function App() {
       packageUrl: "https://www.npmjs.com/package/@mcpdotdirect/create-mcp-server"
     },
     {
-      name: "need a custom mcp server built ? contact us",
+      name: "need a custom mcp server built ?",
       url: "mailto:info@mcp.direct",
       description: "get in touch, we can advise & build a solution tailored for your needs",
       packageUrl: ""
@@ -30,6 +30,12 @@ function App() {
 
   const otherResources = [
     {
+      name: "modelcontextprotocol official specs",
+      url: "https://spec.modelcontextprotocol.io/",
+      description: "original spec for sharing context, tools, and composable integrations with language models",
+      buttonText: "docs"
+    },
+    {
       name: "modelcontextprotocol/servers",
       url: "https://github.com/modelcontextprotocol/servers",
       description: "official collection of reference implementations for the model context protocol"
@@ -37,7 +43,7 @@ function App() {
     {
       name: "awesome-mcp-servers",
       url: "https://github.com/punkpeye/awesome-mcp-servers",
-      description: "curated list of mcp servers"
+      description: "curated list of production-ready and experimental MCP servers"
     },
     {
       name: "mcpdotdirect",
@@ -71,46 +77,63 @@ function App() {
                 </p>
                 <div className="button-container">
                   <a href={repo.url} target="_blank" rel="noopener noreferrer" className="btn terminal-button">
-                    github
+                    {repo.name === "need a custom mcp server built ?" ? "email" : "github"}
                   </a>
-                  <a href={repo.packageUrl} target="_blank" rel="noopener noreferrer" className="btn terminal-button">
-                    package
-                  </a>
+                  {repo.packageUrl && repo.name !== "need a custom mcp server built ?" && (
+                    <a href={repo.packageUrl} target="_blank" rel="noopener noreferrer" className="btn terminal-button">
+                      package
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
           </div>
           
-          <h2>other resources</h2>
-          <div className="terminal-card">
-            <div>
-              {otherResources.map((resource) => (
-                <div key={resource.name} className="resource-item">
-                  <h4>{resource.name}</h4>
-                  <p>{resource.description}</p>
-                  <div className="button-container">
+          <h3>quickly run <span className="command">evm-mcp-server</span> in cursor with a <span className="command">~/.cursor/mcp.json</span> file:</h3>
+          <div>
+            <pre>
+{`{
+  "mcpServers": {
+    "evm-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mcpdotdirect/evm-mcp-server"
+      ]
+    }
+  }
+}`}
+            </pre>
+          </div>
+          
+          <h2 className="resources">resources</h2>
+          <div className="resource-container">
+            {otherResources.map((resource) => (
+              <div key={resource.name} className="resource-item terminal-card">
+                <h4>{resource.name}</h4>
+                <p>{resource.description}</p>
+                <div className="button-container">
+                  <a 
+                    href={resource.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="btn terminal-button"
+                  >
+                    {resource.buttonText || "github"}
+                  </a>
+                  {resource.packageUrl && (
                     <a 
-                      href={resource.url} 
+                      href={resource.packageUrl} 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="btn terminal-button"
                     >
-                      {resource.name === "mcpdotdirect" ? "github org" : "github"}
+                      packages
                     </a>
-                    {resource.packageUrl && (
-                      <a 
-                        href={resource.packageUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="btn terminal-button"
-                      >
-                        packages
-                      </a>
-                    )}
-                  </div>
+                  )}
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </section>
 

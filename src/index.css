@@ -1,6 +1,6 @@
 :root {
-  --global-font-size: 15px;
-  --global-line-height: 1.4em;
+  --global-font-size: 14px;
+  --global-line-height: 1.3em;
   --global-space: 10px;
   --font-stack: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace, serif;
@@ -31,7 +31,7 @@ body {
 .container {
   max-width: var(--page-width);
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
 }
 
 .logo {
@@ -41,13 +41,14 @@ body {
 }
 
 .repo-card {
-  margin-bottom: 20px;
-  padding: 15px;
+  margin-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
   border: 1px solid var(--primary-color);
 }
 
 .repo-card h3 {
-  margin-top: 0;
+  margin-top: 10px;
 }
 
 .repo-card a {
@@ -73,7 +74,7 @@ footer {
 code {
   background-color: var(--code-bg-color);
   color: var(--font-color);
-  padding: 0.2em 0.4em;
+  padding: 0.4em 0.4em;
   border-radius: 3px;
   font-family: var(--mono-font-stack);
   font-size: 0.9em;
